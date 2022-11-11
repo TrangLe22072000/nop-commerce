@@ -175,15 +175,15 @@ public class BasePage {
         BYLOCATOR bylocator = BYLOCATOR.valueOf(locatorSplit[0].toUpperCase());
         switch (bylocator){
             case ID:
-                return By.id(locator);
+                return By.id(locatorSplit[1]);
             case CSS:
-                return By.cssSelector(locator);
+                return By.cssSelector(locatorSplit[1]);
             case XPATH:
-                return By.xpath(locator);
+                return By.xpath(locatorSplit[1]);
                 case NAME:
-                return By.name(locator);
+                return By.name(locatorSplit[1]);
             case CLASS:
-                return By.className(locator);
+                return By.className(locatorSplit[1]);
             default:
                 throw new RuntimeException("not support locator");
         }
