@@ -4,6 +4,7 @@ import com.training.demo.pageobject.AddCustomerPageObject;
 import com.training.demo.pageobject.HomePageObject;
 import com.training.demo.pageobject.LoginPageObject;
 import com.training.demo.pageobject.ManagerHomePageObject;
+import com.training.demo.utils.DataUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -27,9 +28,9 @@ public class ManageCustomer {
     @BeforeMethod
     public void setUp() {
         name = "Trang";
-        dateOfBirth = "22-07-2000";
-        address = "Vĩnh Lộc";
-        city = "Thanh Hóa";
+        dateOfBirth = "05-07-2000";
+        address = "Vinh loc";
+        city = "Thanh hoa";
         state = "sate";
         pin = "123456";
         phone = "0389569963";
@@ -50,7 +51,7 @@ public class ManageCustomer {
         driver.get("https://demo.guru99.com/v4/");
         driver.manage().window().maximize();
         loginPage.openRegisterPage();
-        homePage.inputEmailRegister(email);
+        homePage.inputEmailRegister(DataUtils.getEmailAddress());
         homePage.submitRegister();
         userId = homePage.getUserID();
         password = homePage.getPassword();
@@ -64,28 +65,28 @@ public class ManageCustomer {
         Assert.assertEquals(managerHomePage.getTextHeading(), "Welcome To Manager's Page of Guru99 Bank");
 
         managerHomePage.clickNewCustomer();
-        addCustomerPage.inputName(name);
+        addCustomerPage.inputName(DataUtils.getFirtName());
         addCustomerPage.clickGender();
-        addCustomerPage.inputDateOfBirth(dateOfBirth);
-        addCustomerPage.inputAddress(address);
-        addCustomerPage.inputCity(city);
+        addCustomerPage.inputDateOfBirth(DataUtils.getRandomDOB());
+        addCustomerPage.inputAddress(DataUtils.getFirstNameAddress());
+        addCustomerPage.inputCity(DataUtils.getCity());
         addCustomerPage.inputState(state);
-        addCustomerPage.inputPin(pin);
-        addCustomerPage.inputPhone(phone);
-        addCustomerPage.inputEmail(email);
-        addCustomerPage.inputPassword(password);
+        addCustomerPage.inputPin(DataUtils.getPin());
+        addCustomerPage.inputPhone(DataUtils.getPhoneNumber());
+        addCustomerPage.inputEmail(DataUtils.getEmailAddress());
+        addCustomerPage.inputPassword(DataUtils.getPassword());
         addCustomerPage.clickSubmit();
 
-        Assert.assertEquals(addCustomerPage.getName(), name);
+        Assert.assertEquals(addCustomerPage.getName(), DataUtils.getFirtName());
         Assert.assertEquals(addCustomerPage.getGender(), gender);
-        Assert.assertEquals(addCustomerPage.getDateOfBirth(), dateOfBirth);
-        Assert.assertEquals(addCustomerPage.getAddress(), address);
-        Assert.assertEquals(addCustomerPage.getCity(), city);
+        Assert.assertEquals(addCustomerPage.getDateOfBirth(), DataUtils.getRandomDOB());
+        Assert.assertEquals(addCustomerPage.getAddress(), DataUtils.getEmailAddress());
+        Assert.assertEquals(addCustomerPage.getCity(), DataUtils.getCity());
         Assert.assertEquals(addCustomerPage.getSate(), state);
-        Assert.assertEquals(addCustomerPage.getPin(), pin);
-        Assert.assertEquals(addCustomerPage.getPhone(), phone);
-        Assert.assertEquals(addCustomerPage.getEmail(), email);
-        Assert.assertEquals(addCustomerPage.getPassword(), password);
+        Assert.assertEquals(addCustomerPage.getPin(), DataUtils.getPin());
+        Assert.assertEquals(addCustomerPage.getPhone(), DataUtils.getPhoneNumber());
+        Assert.assertEquals(addCustomerPage.getEmail(), DataUtils.getEmailAddress();
+        Assert.assertEquals(addCustomerPage.getPassword(), DataUtils.getPassword());
 
 
     }
