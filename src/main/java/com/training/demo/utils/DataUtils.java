@@ -30,7 +30,7 @@ public class DataUtils {
     }
 
     public static String getPhoneNumber() {
-        return faker.phoneNumber().phoneNumber();
+        return String.valueOf(faker.number().numberBetween(10000000, 999999999));
     }
 
     public static String getCity() {
@@ -41,14 +41,15 @@ public class DataUtils {
         String dob = faker.date().birthday().toString();
         return dob.toString();
     }
-    public static String getPassword(){
+
+    public static String getPassword() {
         return faker.internet().password();
     }
-    public static String getPin(){
-        return String.valueOf(faker.number().numberBetween(100000,999999));
+
+    public static String getPin() {
+        return String.valueOf(faker.number().numberBetween(100000, 999999));
 
     }
-
 
 
 }

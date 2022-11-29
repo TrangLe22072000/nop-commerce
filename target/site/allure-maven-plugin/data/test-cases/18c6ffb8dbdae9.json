@@ -1,0 +1,110 @@
+{
+  "uid" : "18c6ffb8dbdae9",
+  "name" : "TC01_Register",
+  "fullName" : "com.training.demo.feature.ManageCustomer.TC01_Register",
+  "historyId" : "f34e45c8f16a3cf36b110dec19737a26",
+  "time" : {
+    "start" : 1669721553170,
+    "stop" : 1669721563983,
+    "duration" : 10813
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "deleteAllFilesInReportNGScreenshot",
+    "time" : {
+      "start" : 1669721549868,
+      "stop" : 1669721549880,
+      "duration" : 12
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1669721549882,
+      "stop" : 1669721553092,
+      "duration" : 3210
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1669721578974,
+      "stop" : 1669721579659,
+      "duration" : 685
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.training.demo.feature.ManageCustomer"
+  }, {
+    "name" : "testClass",
+    "value" : "com.training.demo.feature.ManageCustomer"
+  }, {
+    "name" : "testMethod",
+    "value" : "TC01_Register"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Demo Guru"
+  }, {
+    "name" : "suite",
+    "value" : "Test login 1"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.training.demo.feature.ManageCustomer"
+  }, {
+    "name" : "host",
+    "value" : "panther-tranglt3"
+  }, {
+    "name" : "thread",
+    "value" : "17668@panther-tranglt3.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "18c6ffb8dbdae9.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,56 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Demo Guru",
+    "children" : [ {
+      "name" : "Test login 1",
+      "children" : [ {
+        "name" : "com.training.demo.feature.ManageCustomer",
+        "children" : [ {
+          "name" : "TC01_Register",
+          "uid" : "18c6ffb8dbdae9",
+          "parentUid" : "3c3e076725aef164beb4e73465f53ebd",
+          "status" : "passed",
+          "time" : {
+            "start" : 1669721553170,
+            "stop" : 1669721563983,
+            "duration" : 10813
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "TC02_Login",
+          "uid" : "36ebf0ddbb3a280e",
+          "parentUid" : "3c3e076725aef164beb4e73465f53ebd",
+          "status" : "passed",
+          "time" : {
+            "start" : 1669721564083,
+            "stop" : 1669721570807,
+            "duration" : 6724
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "TC03_NewCustomer",
+          "uid" : "30ea032fd5d44594",
+          "parentUid" : "3c3e076725aef164beb4e73465f53ebd",
+          "status" : "passed",
+          "time" : {
+            "start" : 1669721570813,
+            "stop" : 1669721578971,
+            "duration" : 8158
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "3c3e076725aef164beb4e73465f53ebd"
+      } ],
+      "uid" : "2a0022b3aff3b4d1c29b9dd386f459bc"
+    } ],
+    "uid" : "719e746d2fa9ec2319091b5d5405940b"
+  } ]
+}

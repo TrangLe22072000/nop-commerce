@@ -1,0 +1,31 @@
+[ {
+  "uid" : "18c6ffb8dbdae9",
+  "name" : "TC01_Register",
+  "time" : {
+    "start" : 1669721553170,
+    "stop" : 1669721563983,
+    "duration" : 10813
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "30ea032fd5d44594",
+  "name" : "TC03_NewCustomer",
+  "time" : {
+    "start" : 1669721570813,
+    "stop" : 1669721578971,
+    "duration" : 8158
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "36ebf0ddbb3a280e",
+  "name" : "TC02_Login",
+  "time" : {
+    "start" : 1669721564083,
+    "stop" : 1669721570807,
+    "duration" : 6724
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
