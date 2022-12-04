@@ -25,4 +25,5 @@ public class AddCustomerPageUI {
     public static final String INPUT_EMAIL = xpath("//input[@name='emailid']");
     public static final String INPUT_PASSWORD = xpath("//input[@name='password']");
     public static final String CLICK_SUBMIT = xpath("//input[@name='sub']") ;
+    public static final String CUSTOMER_ID_LABEL = xpath("//td[text()='Customer ID']/following-sibling::td");
 }

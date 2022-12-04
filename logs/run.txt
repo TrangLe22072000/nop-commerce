@@ -1,0 +1,35 @@
+[INFO ] [2022-12-04 19:51:13,555] Click to visit link here
+[INFO ] [2022-12-04 19:51:17,701] Sendkey value to email textboxchanel.ebert@gmail.com
+[INFO ] [2022-12-04 19:51:18,200] Click to submit
+[INFO ] [2022-12-04 19:51:21,207] Get UserID
+[INFO ] [2022-12-04 19:51:21,328] Get Password
+[INFO ] [2022-12-04 19:51:28,948] Input UserId to Login
+[INFO ] [2022-12-04 19:51:29,252] Input Password to Login
+[INFO ] [2022-12-04 19:51:29,501] Click to login
+[INFO ] [2022-12-04 19:51:33,108] Click to add customer
+[INFO ] [2022-12-04 19:51:36,319] Input name
+[INFO ] [2022-12-04 19:51:36,598] Chose gender
+[INFO ] [2022-12-04 19:51:36,745] Input Date of birth
+[INFO ] [2022-12-04 19:51:37,002] Input address
+[INFO ] [2022-12-04 19:51:37,262] Input city
+[INFO ] [2022-12-04 19:51:37,511] Input state
+[INFO ] [2022-12-04 19:51:37,726] Input pin
+[INFO ] [2022-12-04 19:51:37,965] Input phone
+[INFO ] [2022-12-04 19:51:38,218] Input email
+[INFO ] [2022-12-04 19:51:38,535] Input pass
+[INFO ] [2022-12-04 19:51:38,768] Click submit to create new customer
+[INFO ] [2022-12-04 19:51:42,600] Get Customer ID
+[INFO ] [2022-12-04 19:51:42,743] Click to edit customer
+[INFO ] [2022-12-04 19:51:46,436] Input CustomerID: 39860
+[INFO ] [2022-12-04 19:51:46,721] Click to Submit button
+[INFO ] [2022-12-04 19:51:50,477] Input addressEdit
+[INFO ] [2022-12-04 19:51:50,725] Input phoneEdit
+[INFO ] [2022-12-04 19:51:50,955] click To SubmitEdit Button
+[INFO ] [2022-12-04 19:51:52,065] Click To Accept Alert
+[INFO ] [2022-12-04 19:51:52,097] Input CustomerID: 39860
+[INFO ] [2022-12-04 19:51:54,780] Click to Submit button
+[INFO ] [2022-12-04 19:51:58,504] getTextAddressLabel so sanh edit customer
+[INFO ] [2022-12-04 19:51:58,707] Click to delete customer
+[INFO ] [2022-12-04 19:52:02,136] Input CustomerID To Delete: 39860
+[INFO ] [2022-12-04 19:52:02,386] click To Submit Button
+[INFO ] [2022-12-04 19:52:02,531] click To AcceptAlert

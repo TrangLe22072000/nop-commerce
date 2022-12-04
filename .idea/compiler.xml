@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demo-pom-selenium" />
         <module name="selenium-hybrid" />
+        <module name="selenium-hybrid-template" />
       </profile>
     </annotationProcessing>
   </component>

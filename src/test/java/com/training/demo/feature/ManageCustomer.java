@@ -1,10 +1,7 @@
 package com.training.demo.feature;
 
 import com.training.demo.core.BaseTest;
-import com.training.demo.pageobject.AddCustomerPageObject;
-import com.training.demo.pageobject.HomePageObject;
-import com.training.demo.pageobject.LoginPageObject;
-import com.training.demo.pageobject.ManagerHomePageObject;
+import com.training.demo.pageobject.*;
 import com.training.demo.utils.DataUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -19,13 +16,16 @@ public class ManageCustomer extends BaseTest {
     private HomePageObject homePage;
     private ManagerHomePageObject managerHomePage;
     private AddCustomerPageObject addCustomerPage;
-    private String name, dateOfBirth, address, city, state, pin, phone, email, gender;
+    private EditCustomerPageObject editCustomerPage;
+    private DeleteCustomerPageObject deleteCustomerPage;
+    private String name, dateOfBirth, address, city, state, pin, phone, email, gender,phoneEdit,addressEdit,customerID;
     private String userId, password;
 
 
+    @Parameters("browser")
     @BeforeTest
-    public void setUp() {
-        name = "Trang";
+    public void setUp(@Optional("chrome") String browser) {
+        name = DataUtils.getFirtName();
         dateOfBirth = "05-07-2000";
         address = "Vinh loc";
         city = "Thanh hoa";
@@ -40,7 +40,11 @@ public class ManageCustomer extends BaseTest {
         homePage = new HomePageObject(driver);
         managerHomePage = new ManagerHomePageObject(driver);
         addCustomerPage = new AddCustomerPageObject(driver);
+        editCustomerPage = new EditCustomerPageObject(driver);
+        deleteCustomerPage = new DeleteCustomerPageObject(driver);
         DataUtils.getData();
+        addressEdit = DataUtils.getFirstNameAddress();
+        phoneEdit = DataUtils.getPhoneNumber();
     }
 
     @Test (priority =  0)
@@ -70,7 +74,7 @@ public class ManageCustomer extends BaseTest {
     public void TC03_NewCustomer() {
 
         managerHomePage.clickNewCustomer();
-        addCustomerPage.inputName(DataUtils.getFirtName());
+        addCustomerPage.inputName(name);
         addCustomerPage.clickGender();
         addCustomerPage.inputDateOfBirth(dateOfBirth);
         addCustomerPage.inputAddress(DataUtils.getFirstNameAddress());
@@ -81,11 +85,12 @@ public class ManageCustomer extends BaseTest {
         addCustomerPage.inputEmail(DataUtils.getEmailAddress());
         addCustomerPage.inputPassword(DataUtils.getPassword());
         addCustomerPage.clickSubmit();
+        customerID = addCustomerPage.getTextCustomerID();
 
     }
 //    @Test
 //    public void TC04_VerifyCustomerCreated() {
-//        Assert.assertEquals(addCustomerPage.getName(), DataUtils.getFirtName());
+//        Assert.assertEquals(addCustomerPage.getName(),name);
 //        Assert.assertEquals(addCustomerPage.getGender(), gender);
 //        Assert.assertEquals(addCustomerPage.getDateOfBirth(), DataUtils.getRandomDOB());
 //        Assert.assertEquals(addCustomerPage.getAddress(), DataUtils.getEmailAddress());
@@ -97,7 +102,36 @@ public class ManageCustomer extends BaseTest {
 //        Assert.assertEquals(addCustomerPage.getPassword(), DataUtils.getPassword());
 
 
-  //  }
+ //   }
+
+    @Test
+    public void TC04_EditCustomer() {
+        managerHomePage.clickEditCustomer();
+        editCustomerPage.inputCustomerID(customerID);
+        editCustomerPage.clickToSubmitButton();
+
+        editCustomerPage.inputToAddressToEdit(addressEdit);
+        editCustomerPage.inputPhoneToEdit(phoneEdit);
+
+        editCustomerPage.clickToSubmitEditButton();
+        editCustomerPage.clickToAcceptAlert();
+
+        editCustomerPage.inputCustomerID(customerID);
+        editCustomerPage.clickToSubmitButton();
+
+        Assert.assertEquals(editCustomerPage.getTextAddressLabel(), addressEdit);
+        Assert.assertEquals(editCustomerPage.getTextPhoneLabel(), phoneEdit);
+
+    }
+
+    @Test
+    public void TC05_DeleteCustomer() {
+        managerHomePage.clickToDeleteCustomer();
+        deleteCustomerPage.inputCustomerIdToDelete(customerID);
+        deleteCustomerPage.clickToSubmitButton();
+        deleteCustomerPage.clickToAcceptAlert();
+        Assert.assertEquals(deleteCustomerPage.getTextDeleteSuccess(), "Customer does not Exist!!!");
+    }
 
 
     @AfterTest

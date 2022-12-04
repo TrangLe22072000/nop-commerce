@@ -12,6 +12,7 @@ com\training\demo\pageobject\AddCustomerPageObject.class
 com\training\demo\pageobject\ManagerHomePageObject.class
 com\training\demo\pageui\LoginPageUI.class
 com\training\demo\factory\environment\LocalFactory.class
+com\training\demo\helper\logger\Log.class
 com\training\demo\core\BasePage$3.class
 com\training\demo\core\Prefix.class
 com\training\demo\core\GlobalConstants.class

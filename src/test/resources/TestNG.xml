@@ -4,6 +4,7 @@
     <test name="Test login 1">
         <!--<parameter name="emailid" value="tester456@gmail.com"/>
         <parameter name="password" value="test@123"/>-->
+        <parameter name="browser" value="chrome"/>
         <classes>
             <class name="com.training.demo.feature.ManageCustomer"/>
         </classes>
